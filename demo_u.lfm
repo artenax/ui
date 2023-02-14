@@ -1,0 +1,140 @@
+object Form1: TForm1
+  Left = 190
+  Height = 600
+  Top = 105
+  Width = 800
+  ActiveControl = LBOperations
+  Caption = 'Universal Interface'
+  ClientHeight = 579
+  ClientWidth = 800
+  Menu = MMMenu
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '2.2.4.0'
+  object MMOutput: TMemo
+    Left = 8
+    Height = 120
+    Top = 374
+    Width = 784
+    Color = clGrayText
+    Font.Color = clWhite
+    ParentFont = False
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+    WordWrap = False
+  end
+  object BTExecute: TButton
+    Left = 712
+    Height = 32
+    Top = 334
+    Width = 80
+    Caption = 'Execute'
+    OnClick = BTExecuteClick
+    TabOrder = 1
+  end
+  object LBOperations: TListBox
+    Left = 8
+    Height = 120
+    Top = 8
+    Width = 784
+    ItemHeight = 0
+    OnClick = LBOperationsClick
+    TabOrder = 2
+    TopIndex = -1
+  end
+  object EDInput: TLabeledEdit
+    Left = 8
+    Height = 27
+    Top = 160
+    Width = 736
+    EditLabel.Height = 17
+    EditLabel.Width = 736
+    EditLabel.Caption = 'Input file'
+    EditLabel.ParentColor = False
+    TabOrder = 3
+    OnChange = EDOutputChange
+  end
+  object EDOutput: TLabeledEdit
+    Left = 8
+    Height = 27
+    Top = 224
+    Width = 736
+    EditLabel.Height = 17
+    EditLabel.Width = 736
+    EditLabel.Caption = 'Output file'
+    EditLabel.ParentColor = False
+    TabOrder = 4
+    OnChange = EDOutputChange
+  end
+  object BTSelectInput: TButton
+    Left = 752
+    Height = 32
+    Top = 160
+    Width = 40
+    Caption = '...'
+    OnClick = BTSelectInputClick
+    TabOrder = 5
+  end
+  object BTSelectOutput: TButton
+    Left = 752
+    Height = 32
+    Top = 224
+    Width = 40
+    Caption = '...'
+    OnClick = BTSelectOutputClick
+    TabOrder = 6
+  end
+  object EDCommand: TLabeledEdit
+    Left = 8
+    Height = 27
+    Top = 286
+    Width = 784
+    EditLabel.Height = 17
+    EditLabel.Width = 784
+    EditLabel.Caption = 'Command line'
+    EditLabel.ParentColor = False
+    TabOrder = 7
+  end
+  object CBShell: TCheckBox
+    Left = 8
+    Height = 21
+    Top = 334
+    Width = 50
+    Caption = 'Shell'
+    Checked = True
+    OnChange = EDOutputChange
+    State = cbChecked
+    TabOrder = 8
+  end
+  object CBRedirectErr: TCheckBox
+    Left = 128
+    Height = 21
+    Top = 334
+    Width = 107
+    Caption = 'Redirect StdErr'
+    Checked = True
+    OnChange = EDOutputChange
+    State = cbChecked
+    TabOrder = 9
+  end
+  object MMMenu: TMainMenu
+    Left = 40
+    Top = 512
+    object MIUI: TMenuItem
+      Caption = 'UI'
+      object MIQuit: TMenuItem
+        Caption = 'Quit'
+        OnClick = MIQuitClick
+      end
+    end
+  end
+  object ODDialog: TOpenDialog
+    Left = 136
+    Top = 512
+  end
+  object SDDialog: TSaveDialog
+    Left = 240
+    Top = 512
+  end
+end

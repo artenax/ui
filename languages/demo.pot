@@ -1,0 +1,57 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: demo_u.rswavtomp3ffmpeg
+msgid "Convert WAV to AAC q0.98 using Nero"
+msgstr ""
+
+#: demo_u.rswmatomp3ffmpeg
+msgid "Convert WAV to AAC q0.99 using Nero"
+msgstr ""
+
+#: tform1.btexecute.caption
+msgid "Execute"
+msgstr ""
+
+#: tform1.btselectinput.caption
+msgctxt "tform1.btselectinput.caption"
+msgid "..."
+msgstr ""
+
+#: tform1.btselectoutput.caption
+msgctxt "tform1.btselectoutput.caption"
+msgid "..."
+msgstr ""
+
+#: tform1.caption
+msgid "Universal Interface"
+msgstr ""
+
+#: tform1.cbredirecterr.caption
+msgid "Redirect StdErr"
+msgstr ""
+
+#: tform1.cbshell.caption
+msgid "Shell"
+msgstr ""
+
+#: tform1.edcommand.editlabel.caption
+msgid "Command line"
+msgstr ""
+
+#: tform1.edinput.editlabel.caption
+msgid "Input file"
+msgstr ""
+
+#: tform1.edoutput.editlabel.caption
+msgid "Output file"
+msgstr ""
+
+#: tform1.miquit.caption
+msgid "Quit"
+msgstr ""
+
+#: tform1.miui.caption
+msgid "UI"
+msgstr ""
+
