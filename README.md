@@ -19,3 +19,8 @@ Click Save
 You can show logs in View-Messages  
 Build your project: Run-Compile (Ctrl+F9)  
 Compiled binary file demo will be in project folder (depends on GTK2)  
+
+# Restrictions  
+Do not use quotation marks (double and single) in filenames and paths  
+
+![ui](https://user-images.githubusercontent.com/107228652/218859651-2688038b-47e0-48f6-ade2-5d81ec91d092.png)
