@@ -5,7 +5,7 @@ This application was written by Roland57 from [MLO forum](https://www.mageialinu
 There you can read the discussion in French.  
 
 # Editing the source code and building it  
-Install the Lazarus IDE on Linux (Windows is not supported)  
+Install the Lazarus IDE on Linux (Windows is not supported yet)  
 https://www.lazarus-ide.org/index.php?page=downloads  
 Clone the repository:  
 `git clone https://github.com/artenax/ui`  
