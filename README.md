@@ -21,6 +21,8 @@ Build your project: Run-Compile (Ctrl+F9)
 Compiled binary file demo will be in project folder (depends on GTK2)  
 
 # Restrictions  
-Do not use quotation marks (double and single) in filenames and paths  
+Do not use quotation marks (double and single) in filenames and paths.  
+Fixed version [here](https://www.mageialinux-online.org/upload/ui-230214.zip).  
+[Discussion](https://www.mageialinux-online.org/forum/topic-30422-2+universal-gui-input-output.php).  
 
 ![ui](https://user-images.githubusercontent.com/107228652/218859651-2688038b-47e0-48f6-ade2-5d81ec91d092.png)
