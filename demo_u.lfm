@@ -1,11 +1,10 @@
 object Form1: TForm1
-  Left = 190
+  Left = 443
   Height = 600
-  Top = 105
+  Top = 56
   Width = 800
-  ActiveControl = LBOperations
   Caption = 'Universal Interface'
-  ClientHeight = 579
+  ClientHeight = 573
   ClientWidth = 800
   Menu = MMMenu
   OnActivate = FormActivate
@@ -17,7 +16,7 @@ object Form1: TForm1
     Height = 120
     Top = 374
     Width = 784
-    Color = clGrayText
+    Color = clInfoBk
     Font.Color = clWhite
     ParentFont = False
     ScrollBars = ssAutoBoth
@@ -45,10 +44,10 @@ object Form1: TForm1
   end
   object EDInput: TLabeledEdit
     Left = 8
-    Height = 27
+    Height = 35
     Top = 160
     Width = 736
-    EditLabel.Height = 17
+    EditLabel.Height = 19
     EditLabel.Width = 736
     EditLabel.Caption = 'Input file'
     EditLabel.ParentColor = False
@@ -57,10 +56,10 @@ object Form1: TForm1
   end
   object EDOutput: TLabeledEdit
     Left = 8
-    Height = 27
+    Height = 35
     Top = 224
     Width = 736
-    EditLabel.Height = 17
+    EditLabel.Height = 19
     EditLabel.Width = 736
     EditLabel.Caption = 'Output file'
     EditLabel.ParentColor = False
@@ -87,10 +86,10 @@ object Form1: TForm1
   end
   object EDCommand: TLabeledEdit
     Left = 8
-    Height = 27
+    Height = 35
     Top = 286
     Width = 784
-    EditLabel.Height = 17
+    EditLabel.Height = 19
     EditLabel.Width = 784
     EditLabel.Caption = 'Command line'
     EditLabel.ParentColor = False
@@ -98,9 +97,9 @@ object Form1: TForm1
   end
   object CBShell: TCheckBox
     Left = 8
-    Height = 21
+    Height = 23
     Top = 334
-    Width = 50
+    Width = 55
     Caption = 'Shell'
     Checked = True
     OnChange = EDOutputChange
@@ -109,9 +108,9 @@ object Form1: TForm1
   end
   object CBRedirectErr: TCheckBox
     Left = 128
-    Height = 21
+    Height = 23
     Top = 334
-    Width = 107
+    Width = 119
     Caption = 'Redirect StdErr'
     Checked = True
     OnChange = EDOutputChange
