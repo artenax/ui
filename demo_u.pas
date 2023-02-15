@@ -64,8 +64,8 @@ uses
 {$R *.lfm}
 
 resourcestring
-  rsWavToMp3Ffmpeg = 'Convert WAV to AAC q0.98 using Nero';
-  rsWmaToMp3Ffmpeg = 'Convert WAV to AAC q0.99 using Nero';
+  rs_wav_to_aac_q098_nero = 'Convert WAV to AAC q0.98 using Nero';
+  rs_wav_to_aac_q099_nero = 'Convert WAV to AAC q0.99 using Nero';
 
 constructor TToolCommand.CreateToolCommand(const ACommand: string);
 { https://stackoverflow.com/a/16128750 }
@@ -137,8 +137,8 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   FCommandPattern := EmptyStr;
-  LBOperations.Items.AddObject(rsWavToMp3Ffmpeg, TToolCommand.CreateToolCommand('nero -q 0.98 -lc -if "%s" -of "%s"'));
-  LBOperations.Items.AddObject(rsWmaToMp3Ffmpeg, TToolCommand.CreateToolCommand('nero -q 0.99 -lc -if "%s" -of "%s"'));
+  LBOperations.Items.AddObject(rs_wav_to_aac_q098_nero, TToolCommand.CreateToolCommand('nero -q 0.98 -lc -if "%s" -of "%s"'));
+  LBOperations.Items.AddObject(rs_wav_to_aac_q099_nero, TToolCommand.CreateToolCommand('nero -q 0.99 -lc -if "%s" -of "%s"'));
 end;
 
 procedure TForm1.LBOperationsClick(Sender: TObject);
