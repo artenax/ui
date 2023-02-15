@@ -7,7 +7,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Menus,
-  ExtCtrls, ActnList, FileUtil, StrUtils, AsyncProcess, Process;
+  ExtCtrls, ActnList, FileUtil, AsyncProcess, Process;
 
 type
   TToolCommand = class
@@ -64,8 +64,8 @@ uses
 {$R *.lfm}
 
 resourcestring
-  rsWavToMp3Ffmpeg = 'Convert WAV to AAC q0.98 using Nero';
-  rsWmaToMp3Ffmpeg = 'Convert WAV to AAC q0.99 using Nero';
+  rs_wav_to_aac_q098_nero = 'Convert WAV to AAC q0.98 using Nero';
+  rs_wav_to_aac_q099_nero = 'Convert WAV to AAC q0.99 using Nero';
 
 constructor TToolCommand.CreateToolCommand(const ACommand: string);
 { https://stackoverflow.com/a/16128750 }
@@ -92,11 +92,32 @@ end;
 procedure TForm1.BTExecuteClick(Sender: TObject);
 var
   LProcess: TAsyncProcess;
+  LList: TStringList;
+  i: integer;
 begin
+  MMOutput.Clear;
+
   LProcess := TAsyncProcess.Create(Self);
   LProcess.OnReadData := @AsyncProcess1ReadData;
   LProcess.Options := [poUsePipes, poNoConsole];
-  LProcess.ParseCmdLine(EDCommand.Text);
+
+  if CBShell.Checked then
+  begin
+    LProcess.Executable := FindDefaultExecutablePath('sh');
+    LProcess.Parameters.Add('-c');
+    LProcess.Parameters.Add(EDCommand.Text);
+  end else
+  begin
+    LList := TStringList.Create;
+    LList.Delimiter := ' ';
+    LList.QuoteChar := '"';
+    LList.DelimitedText := EDCommand.Text;
+    LProcess.Executable := LList[0];
+    for i := 1 to Pred(LList.Count) do
+      LProcess.Parameters.Add(LList[i]);
+    LList.Free;
+  end;
+
   LProcess.Execute;
 end;
 
@@ -114,6 +135,16 @@ end;
 
 procedure TForm1.EDOutputChange(Sender: TObject);
 begin
+{$IFDEF DEBUG}
+  if Sender is TLabeledEdit then
+    WriteLn('DEBUG TForm1.EDOutputChange Sender = ', TLabeledEdit(Sender).Name)
+  else if Sender is TCheckBox then
+    WriteLn('DEBUG TForm1.EDOutputChange Sender = ', TCheckBox(Sender).Name)
+  else
+    WriteLn('DEBUG TForm1.EDOutputChange Sender = ?');
+{$ENDIF}
+  CBRedirectErr.Enabled := CBShell.Checked;
+  CBRedirectErr.Checked := CBRedirectErr.Checked and CBRedirectErr.Enabled;
   BuildCommandLine;
 end;
 
@@ -137,8 +168,8 @@ end;
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   FCommandPattern := EmptyStr;
-  LBOperations.Items.AddObject(rsWavToMp3Ffmpeg, TToolCommand.CreateToolCommand('nero -q 0.98 -lc -if "%s" -of "%s"'));
-  LBOperations.Items.AddObject(rsWmaToMp3Ffmpeg, TToolCommand.CreateToolCommand('nero -q 0.99 -lc -if "%s" -of "%s"'));
+  LBOperations.Items.AddObject(rs_wav_to_aac_q098_nero, TToolCommand.CreateToolCommand('nero -q 0.98 -lc -if "%s" -of "%s"'));
+  LBOperations.Items.AddObject(rs_wav_to_aac_q099_nero, TToolCommand.CreateToolCommand('nero -q 0.99 -lc -if "%s" -of "%s"'));
 end;
 
 procedure TForm1.LBOperationsClick(Sender: TObject);
@@ -159,20 +190,17 @@ end;
 
 procedure TForm1.BuildCommandLine;
 begin
-  if (Length(FCommandPattern) > 0)
-  and (Length(EDInput.Text) > 0)
-  and (Length(EDOutput.Text) > 0) then
+  if  (Length(FCommandPattern) > 0)
+  and (Length(EDInput.Text)    > 0)
+  and (Length(EDOutput.Text)   > 0) then
   begin
     EDCommand.Text := Format(FCommandPattern, [EDInput.Text, EDOutput.Text]);
+
     if CBShell.Checked then
-      EDCommand.Text := Concat(
-        FindDefaultExecutablePath('sh'),
-        ' -c ''',
-        EDCommand.Text,
-        ' ',
-        IfThen(CBRedirectErr.Checked, '2>&1', ''),
-        ''''
-      );
+    begin
+      if CBRedirectErr.Checked then
+        EDCommand.Text := EDCommand.Text + ' 2>&1'
+    end;
   end;
 end;
 
