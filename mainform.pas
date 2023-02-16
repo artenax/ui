@@ -176,7 +176,7 @@ end;
 
 procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 var
-  i: Integer;
+  i: integer;
 begin
   for i := 0 to Pred(LBOperations.Items.Count) do
     LBOperations.Items.Objects[i].Free;

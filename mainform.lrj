@@ -1,7 +1,10 @@
 {"version":1,"strings":[
 {"hash":266748677,"name":"tform1.caption","sourcebytes":[85,110,105,118,101,114,115,97,108,32,73,110,116,101,114,102,97,99,101],"value":"Universal Interface"},
 {"hash":216771813,"name":"tform1.btexecute.caption","sourcebytes":[69,120,101,99,117,116,101],"value":"Execute"},
+{"hash":143631507,"name":"tform1.lboperations.hint","sourcebytes":[79,112,101,114,97,116,105,111,110,115],"value":"Operations"},
+{"hash":165828137,"name":"tform1.edinput.hint","sourcebytes":[73,110,112,117,116,32,102,105,108,101,32,111,114,32,100,105,114,101,99,116,111,114,121],"value":"Input file or directory"},
 {"hash":207866709,"name":"tform1.edinput.editlabel.caption","sourcebytes":[73,110,112,117,116,32,102,105,108,101],"value":"Input file"},
+{"hash":249493033,"name":"tform1.edoutput.hint","sourcebytes":[79,117,116,112,117,116,32,102,105,108,101,32,111,114,32,100,105,114,101,99,116,111,114,121],"value":"Output file or directory"},
 {"hash":204473685,"name":"tform1.edoutput.editlabel.caption","sourcebytes":[79,117,116,112,117,116,32,102,105,108,101],"value":"Output file"},
 {"hash":12558,"name":"tform1.btselectinput.caption","sourcebytes":[46,46,46],"value":"..."},
 {"hash":12558,"name":"tform1.btselectoutput.caption","sourcebytes":[46,46,46],"value":"..."},
