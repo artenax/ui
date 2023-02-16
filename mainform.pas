@@ -26,6 +26,8 @@ type
     BTSelectOutput: TButton;
     CBShell: TCheckBox;
     CBRedirectErr: TCheckBox;
+    CBDirIn: TCheckBox;
+    CBDirOut: TCheckBox;
     EDInput: TLabeledEdit;
     EDOutput: TLabeledEdit;
     EDCommand: TLabeledEdit;
@@ -34,8 +36,9 @@ type
     MIUI: TMenuItem;
     MIQuit: TMenuItem;
     MMOutput: TMemo;
-    ODDialog: TOpenDialog;
-    SDDialog: TSaveDialog;
+    OFDialog: TOpenDialog;
+    SFDialog: TSaveDialog;
+    ODDialog: TSelectDirectoryDialog;
     procedure AsyncProcess1ReadData(Sender: TObject);
     procedure BTExecuteClick(Sender: TObject);
     procedure BTSelectInputClick(Sender: TObject);
@@ -123,14 +126,26 @@ end;
 
 procedure TForm1.BTSelectInputClick(Sender: TObject);
 begin
-  if ODDialog.Execute then
-    EDInput.Text := ODDialog.Filename;
+  case CBDirIn.Checked of
+    FALSE:
+      if OFDialog.Execute then
+        EDInput.Text := OFDialog.Filename;
+    TRUE:
+      if ODDialog.Execute then
+        EDInput.Text := ODDialog.Filename;
+  end;
 end;
 
 procedure TForm1.BTSelectOutputClick(Sender: TObject);
 begin
-  if SDDialog.Execute then
-    EDOutput.Text := SDDialog.Filename;
+  case CBDirIn.Checked of
+    FALSE:
+      if SFDialog.Execute then
+        EDOutput.Text := SFDialog.Filename;
+    TRUE:
+      if ODDialog.Execute then
+        EDOutput.Text := ODDialog.Filename;
+  end;
 end;
 
 procedure TForm1.EDOutputChange(Sender: TObject);
