@@ -16,6 +16,7 @@ object Form1: TForm1
     Height = 120
     Top = 374
     Width = 784
+    Anchors = [akTop, akLeft, akRight]
     Color = clInfoBk
     Font.Color = clWhite
     ParentFont = False
@@ -28,6 +29,7 @@ object Form1: TForm1
     Height = 32
     Top = 334
     Width = 80
+    Anchors = [akTop, akRight]
     Caption = 'Execute'
     OnClick = BTExecuteClick
     TabOrder = 1
@@ -37,6 +39,7 @@ object Form1: TForm1
     Height = 120
     Top = 8
     Width = 784
+    Anchors = [akTop, akLeft, akRight]
     ItemHeight = 0
     OnClick = LBOperationsClick
     TabOrder = 2
@@ -47,6 +50,7 @@ object Form1: TForm1
     Height = 35
     Top = 160
     Width = 736
+    Anchors = [akTop, akLeft, akRight]
     EditLabel.Height = 19
     EditLabel.Width = 736
     EditLabel.Caption = 'Input file'
@@ -59,6 +63,7 @@ object Form1: TForm1
     Height = 35
     Top = 224
     Width = 736
+    Anchors = [akTop, akLeft, akRight]
     EditLabel.Height = 19
     EditLabel.Width = 736
     EditLabel.Caption = 'Output file'
@@ -71,6 +76,7 @@ object Form1: TForm1
     Height = 32
     Top = 160
     Width = 40
+    Anchors = [akTop, akRight]
     Caption = '...'
     OnClick = BTSelectInputClick
     TabOrder = 5
@@ -80,6 +86,7 @@ object Form1: TForm1
     Height = 32
     Top = 224
     Width = 40
+    Anchors = [akTop, akRight]
     Caption = '...'
     OnClick = BTSelectOutputClick
     TabOrder = 6
@@ -89,6 +96,7 @@ object Form1: TForm1
     Height = 35
     Top = 286
     Width = 784
+    Anchors = [akTop, akLeft, akRight]
     EditLabel.Height = 19
     EditLabel.Width = 784
     EditLabel.Caption = 'Command line'

@@ -155,6 +155,7 @@ var
 begin
   LMenuHeight := Self.Height - Self.ClientHeight;
   Self.Height := MMOutput.Top + MMOutput.Height + 8 + LMenuHeight;
+  MMOutput.Anchors := [akTop, akLeft, akRight, akBottom];
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
