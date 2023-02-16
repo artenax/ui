@@ -1,5 +1,5 @@
 
-unit mainform;
+unit main;
 
 {$mode objfpc}{$H+}
 
