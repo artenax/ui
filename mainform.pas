@@ -1,5 +1,5 @@
 
-unit demo_u;
+unit mainform;
 
 {$mode objfpc}{$H+}
 
