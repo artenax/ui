@@ -16,6 +16,7 @@ object Form1: TForm1
     Height = 120
     Top = 374
     Width = 784
+    Anchors = [akTop, akLeft, akRight]
     Color = clInfoBk
     Font.Color = clWhite
     ParentFont = False
@@ -28,6 +29,7 @@ object Form1: TForm1
     Height = 32
     Top = 334
     Width = 80
+    Anchors = [akTop, akRight]
     Caption = 'Execute'
     OnClick = BTExecuteClick
     TabOrder = 1
@@ -35,34 +37,46 @@ object Form1: TForm1
   object LBOperations: TListBox
     Left = 8
     Height = 120
+    Hint = 'Operations'
     Top = 8
     Width = 784
+    Anchors = [akTop, akLeft, akRight]
     ItemHeight = 0
     OnClick = LBOperationsClick
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 2
     TopIndex = -1
   end
   object EDInput: TLabeledEdit
     Left = 8
     Height = 35
+    Hint = 'Input file or directory'
     Top = 160
-    Width = 736
+    Width = 628
+    Anchors = [akTop, akLeft, akRight]
     EditLabel.Height = 19
-    EditLabel.Width = 736
+    EditLabel.Width = 628
     EditLabel.Caption = 'Input file'
     EditLabel.ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 3
     OnChange = EDOutputChange
   end
   object EDOutput: TLabeledEdit
     Left = 8
     Height = 35
+    Hint = 'Output file or directory'
     Top = 224
-    Width = 736
+    Width = 628
+    Anchors = [akTop, akLeft, akRight]
     EditLabel.Height = 19
-    EditLabel.Width = 736
+    EditLabel.Width = 628
     EditLabel.Caption = 'Output file'
     EditLabel.ParentColor = False
+    ParentShowHint = False
+    ShowHint = True
     TabOrder = 4
     OnChange = EDOutputChange
   end
@@ -71,6 +85,7 @@ object Form1: TForm1
     Height = 32
     Top = 160
     Width = 40
+    Anchors = [akTop, akRight]
     Caption = '...'
     OnClick = BTSelectInputClick
     TabOrder = 5
@@ -80,6 +95,7 @@ object Form1: TForm1
     Height = 32
     Top = 224
     Width = 40
+    Anchors = [akTop, akRight]
     Caption = '...'
     OnClick = BTSelectOutputClick
     TabOrder = 6
@@ -89,6 +105,7 @@ object Form1: TForm1
     Height = 35
     Top = 286
     Width = 784
+    Anchors = [akTop, akLeft, akRight]
     EditLabel.Height = 19
     EditLabel.Width = 784
     EditLabel.Caption = 'Command line'
@@ -110,12 +127,30 @@ object Form1: TForm1
     Left = 128
     Height = 23
     Top = 334
-    Width = 119
-    Caption = 'Redirect StdErr'
+    Width = 112
+    Caption = 'Redirect Error'
     Checked = True
     OnChange = EDOutputChange
     State = cbChecked
     TabOrder = 9
+  end
+  object CBDirIn: TCheckBox
+    Left = 644
+    Height = 23
+    Top = 160
+    Width = 84
+    Anchors = [akTop, akRight]
+    Caption = 'Directory'
+    TabOrder = 10
+  end
+  object CBDirOut: TCheckBox
+    Left = 644
+    Height = 23
+    Top = 224
+    Width = 84
+    Anchors = [akTop, akRight]
+    Caption = 'Directory'
+    TabOrder = 11
   end
   object MMMenu: TMainMenu
     Left = 40
@@ -128,12 +163,16 @@ object Form1: TForm1
       end
     end
   end
-  object ODDialog: TOpenDialog
+  object OFDialog: TOpenDialog
     Left = 136
     Top = 512
   end
-  object SDDialog: TSaveDialog
+  object SFDialog: TSaveDialog
     Left = 240
+    Top = 512
+  end
+  object ODDialog: TSelectDirectoryDialog
+    Left = 344
     Top = 512
   end
 end
