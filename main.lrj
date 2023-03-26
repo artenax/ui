@@ -1,13 +1,18 @@
 {"version":1,"strings":[
 {"hash":266748677,"name":"tform1.caption","sourcebytes":[85,110,105,118,101,114,115,97,108,32,73,110,116,101,114,102,97,99,101],"value":"Universal Interface"},
 {"hash":216771813,"name":"tform1.btexecute.caption","sourcebytes":[69,120,101,99,117,116,101],"value":"Execute"},
+{"hash":143631507,"name":"tform1.lboperations.hint","sourcebytes":[79,112,101,114,97,116,105,111,110,115],"value":"Operations"},
+{"hash":165828137,"name":"tform1.edinput.hint","sourcebytes":[73,110,112,117,116,32,102,105,108,101,32,111,114,32,100,105,114,101,99,116,111,114,121],"value":"Input file or directory"},
 {"hash":207866709,"name":"tform1.edinput.editlabel.caption","sourcebytes":[73,110,112,117,116,32,102,105,108,101],"value":"Input file"},
+{"hash":249493033,"name":"tform1.edoutput.hint","sourcebytes":[79,117,116,112,117,116,32,102,105,108,101,32,111,114,32,100,105,114,101,99,116,111,114,121],"value":"Output file or directory"},
 {"hash":204473685,"name":"tform1.edoutput.editlabel.caption","sourcebytes":[79,117,116,112,117,116,32,102,105,108,101],"value":"Output file"},
 {"hash":12558,"name":"tform1.btselectinput.caption","sourcebytes":[46,46,46],"value":"..."},
 {"hash":12558,"name":"tform1.btselectoutput.caption","sourcebytes":[46,46,46],"value":"..."},
 {"hash":12676549,"name":"tform1.edcommand.editlabel.caption","sourcebytes":[67,111,109,109,97,110,100,32,108,105,110,101],"value":"Command line"},
 {"hash":5893164,"name":"tform1.cbshell.caption","sourcebytes":[83,104,101,108,108],"value":"Shell"},
-{"hash":245526082,"name":"tform1.cbredirecterr.caption","sourcebytes":[82,101,100,105,114,101,99,116,32,83,116,100,69,114,114],"value":"Redirect StdErr"},
+{"hash":234624834,"name":"tform1.cbredirecterr.caption","sourcebytes":[82,101,100,105,114,101,99,116,32,69,114,114,111,114],"value":"Redirect Error"},
+{"hash":146472345,"name":"tform1.cbdirin.caption","sourcebytes":[68,105,114,101,99,116,111,114,121],"value":"Directory"},
+{"hash":146472345,"name":"tform1.cbdirout.caption","sourcebytes":[68,105,114,101,99,116,111,114,121],"value":"Directory"},
 {"hash":1433,"name":"tform1.miui.caption","sourcebytes":[85,73],"value":"UI"},
 {"hash":363524,"name":"tform1.miquit.caption","sourcebytes":[81,117,105,116],"value":"Quit"}
 ]}

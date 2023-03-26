@@ -7,7 +7,7 @@
         <CompatibilityMode Value="True"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="demo"/>
+      <Title Value="ui"/>
       <Scaled Value="True"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
@@ -26,7 +26,7 @@
         <CompilerOptions>
           <Version Value="11"/>
           <Target>
-            <Filename Value="demo"/>
+            <Filename Value="ui"/>
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
@@ -41,6 +41,7 @@
           <Linking>
             <Debugging>
               <GenerateDebugInfo Value="False"/>
+              <DebugInfoType Value="dsDwarf2Set"/>
             </Debugging>
             <LinkSmart Value="True"/>
             <Options>
@@ -49,6 +50,9 @@
               </Win32>
             </Options>
           </Linking>
+          <Other>
+            <CustomOptions Value="-dRELEASE"/>
+          </Other>
         </CompilerOptions>
       </Item2>
     </BuildModes>
@@ -66,11 +70,11 @@
     </RequiredPackages>
     <Units Count="2">
       <Unit0>
-        <Filename Value="demo.lpr"/>
+        <Filename Value="ui.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="demo_u.pas"/>
+        <Filename Value="main.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
@@ -81,7 +85,7 @@
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="demo"/>
+      <Filename Value="ui"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
@@ -89,7 +93,10 @@
     </SearchPaths>
     <Parsing>
       <SyntaxOptions>
+        <CStyleOperator Value="False"/>
         <IncludeAssertionCode Value="True"/>
+        <AllowLabel Value="False"/>
+        <CPPInline Value="False"/>
       </SyntaxOptions>
     </Parsing>
     <CodeGeneration>
@@ -100,6 +107,9 @@
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
     </CodeGeneration>
     <Linking>
       <Debugging>
@@ -114,6 +124,9 @@
         </Win32>
       </Options>
     </Linking>
+    <Other>
+      <CustomOptions Value="-dDEBUG"/>
+    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">

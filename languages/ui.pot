@@ -1,11 +1,11 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
-#: demo_u.rswavtomp3ffmpeg
+#: mainform.rs_wav_to_aac_q098_nero
 msgid "Convert WAV to AAC q0.98 using Nero"
 msgstr ""
 
-#: demo_u.rswmatomp3ffmpeg
+#: mainform.rs_wav_to_aac_q099_nero
 msgid "Convert WAV to AAC q0.99 using Nero"
 msgstr ""
 
