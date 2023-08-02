@@ -25,6 +25,11 @@ Project - Modules (Ctrl+F12) - main.pas
 Project - Forms (Shift+F12) - Form1  
 You can move Form1, click Save All, compile, and your application will run in that position.
 
+Instead of editing in Lazarus, you can edit the main.pas file in any text editor and compile application from the terminal using this command: `cd ui && lazbuild ui.lpi`  
+lazbuild is part of Lazarus.  
+Removing the mention of "Scaled" from the source code will make the project compatible with very old versions of Lazarus (fpc 2.6).  
+You can also change the color of the window and change the build type from Debug to Release.   
+
 # Restrictions
 Do not use double quotation marks in filenames and paths
 
